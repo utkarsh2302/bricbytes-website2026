@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(npm install:*)",
+      "WebFetch(domain:brickbytes360-bd9c.vercel.app)",
+      "WebFetch(domain:stripe.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(node -e \"const c = require\\('cobe'\\); console.log\\(Object.keys\\(c\\)\\)\")",
+      "Bash(gh api:*)",
+      "WebFetch(domain:raw.githubusercontent.com)"
+    ]
+  }
+}

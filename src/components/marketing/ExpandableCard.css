@@ -1,0 +1,157 @@
+.expandable-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.expandable-card:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 4px 16px rgba(0, 113, 227, 0.15), var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.card-header:hover {
+  background: rgba(0, 113, 227, 0.05);
+}
+
+.card-header:active {
+  background: rgba(0, 113, 227, 0.08);
+}
+
+.card-header-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+  flex: 1;
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #0071e3;
+  width: 40px;
+  height: 40px;
+}
+
+.card-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.card-text {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.card-summary {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.card-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #0071e3;
+  margin-top: 0.25rem;
+}
+
+.card-content {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem;
+  background: rgba(0, 113, 227, 0.02);
+}
+
+.card-body {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .card-header {
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-summary {
+    font-size: 0.875rem;
+  }
+
+  .card-content {
+    padding: 1.25rem;
+  }
+
+  .card-body {
+    font-size: 0.875rem;
+  }
+
+  .expandable-card:hover {
+    transform: translateY(-1px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-header {
+    padding: 1rem;
+  }
+
+  .card-header-content {
+    gap: 0.75rem;
+  }
+
+  .card-title {
+    font-size: 0.9375rem;
+  }
+
+  .card-summary {
+    font-size: 0.8125rem;
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .card-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .card-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+}

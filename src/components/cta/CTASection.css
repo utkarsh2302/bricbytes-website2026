@@ -1,0 +1,180 @@
+.cta-section {
+  background: #06050f;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient mesh orbs */
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 120% at -10% 50%, rgba(80,70,229,0.5) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 100% at 110% 50%, rgba(14,165,233,0.35) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 60% at 50%  10%, rgba(124,58,237,0.25) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Gold particles layer */
+.cta-sparkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+  will-change: opacity;
+  transform: translateZ(0);
+}
+
+/* Grain overlay */
+.cta-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.cta-inner {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 3rem;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.cta-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(167,139,250,0.8);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cta-label::before {
+  content: '';
+  display: inline-block;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c6fff, #38bdf8);
+}
+
+.cta-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1.0;
+  color: #ffffff;
+}
+
+/* Gradient highlight on last word */
+.cta-title em {
+  font-style: normal;
+  background: linear-gradient(135deg, #a78bfa, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-subtitle {
+  font-size: 0.9375rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+  max-width: 480px;
+}
+
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: #0a0a1a;
+  padding: 0.9rem 1.85rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  border: none;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 20px rgba(255,255,255,0.15);
+}
+.cta-btn-primary:hover {
+  background: #f0f0ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(255,255,255,0.25);
+}
+
+.cta-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.75);
+  padding: 0.9rem 1.85rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(8px);
+}
+.cta-btn-secondary:hover {
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-1px);
+}
+
+.cta-note {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.04em;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .cta-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .cta-label { justify-content: center; }
+  .cta-actions {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cta-subtitle { max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .cta-actions { flex-direction: column; width: 100%; }
+  .cta-btn-primary, .cta-btn-secondary { width: 100%; justify-content: center; min-height: 50px; }
+}

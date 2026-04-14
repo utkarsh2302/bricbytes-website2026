@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="0.8" opacity="0.3"/>
+  <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="0.6" opacity="0.2"/>
+  <ellipse cx="20" cy="20" rx="18" ry="8" stroke="currentColor" stroke-width="0.7" opacity="0.4"/>
+  <ellipse cx="20" cy="20" rx="8" ry="18" stroke="currentColor" stroke-width="0.7" opacity="0.4"/>
+  <line x1="2" y1="12" x2="38" y2="12" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+  <line x1="2" y1="28" x2="38" y2="28" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+  <!-- Circuit nodes -->
+  <circle cx="12" cy="12" r="1.2" fill="currentColor" opacity="0.6"/>
+  <circle cx="28" cy="12" r="1.2" fill="currentColor" opacity="0.6"/>
+  <circle cx="20" cy="6" r="1" fill="currentColor" opacity="0.5"/>
+  <circle cx="20" cy="34" r="1" fill="currentColor" opacity="0.5"/>
+  <circle cx="8" cy="20" r="1" fill="currentColor" opacity="0.5"/>
+  <circle cx="32" cy="20" r="1" fill="currentColor" opacity="0.5"/>
+  <circle cx="14" cy="28" r="1.2" fill="currentColor" opacity="0.6"/>
+  <circle cx="26" cy="28" r="1.2" fill="currentColor" opacity="0.6"/>
+  <!-- Circuit traces -->
+  <line x1="12" y1="12" x2="20" y2="6" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+  <line x1="28" y1="12" x2="20" y2="6" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+  <line x1="12" y1="12" x2="8" y2="20" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+  <line x1="28" y1="12" x2="32" y2="20" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+  <line x1="8" y1="20" x2="14" y2="28" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+  <line x1="32" y1="20" x2="26" y2="28" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+  <line x1="14" y1="28" x2="20" y2="34" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+  <line x1="26" y1="28" x2="20" y2="34" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+  <!-- Center hexagon hint -->
+  <polygon points="20,14 25,17 25,23 20,26 15,23 15,17" stroke="currentColor" stroke-width="0.7" fill="currentColor" fill-opacity="0.05" opacity="0.5"/>
+</svg>
