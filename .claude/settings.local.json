@@ -4,7 +4,12 @@
       "Bash(npx vercel:*)",
       "Bash(curl -s https://brickbytes-2026.vercel.app)",
       "Bash(curl -I https://brickbytes-2026.vercel.app)",
-      "Bash(curl -I https://brickbytes-2026-5n5904dbh-utkarsh2302s-projects.vercel.app)"
+      "Bash(curl -I https://brickbytes-2026-5n5904dbh-utkarsh2302s-projects.vercel.app)",
+      "Bash(npm list:*)",
+      "Bash(npx husky:*)",
+      "Bash(mkdir -p .husky)",
+      "Bash(cat)",
+      "Bash(chmod +x .husky/pre-commit)"
     ]
   }
 }
