@@ -243,8 +243,8 @@
 
   .hero-robot {
     position: absolute;
-    right: -85%;
-    top: 50%;
+    right: -100%;
+    top: 30%;
     transform: translateY(-50%);
     width: 100vw;
     height: 100vw;
@@ -271,8 +271,8 @@
 
   .hero-robot {
     position: absolute;
-    right: -90%;
-    top: 50%;
+    right: -105%;
+    top: 30%;
     transform: translateY(-50%);
     width: 100vw;
     height: 100vw;
@@ -333,8 +333,8 @@
 
   .hero-robot {
     position: absolute;
-    right: -95%;
-    top: 50%;
+    right: -110%;
+    top: 30%;
     transform: translateY(-50%);
     width: 100vw;
     height: 100vw;
