@@ -242,13 +242,14 @@
     text-align: left;
   }
 
-  /* Robot sits absolutely on the right, extending off-screen */
+  /* Robot sits absolutely on the right, overlaps text slightly */
   .hero-robot {
     position: absolute;
-    right: -30%;
-    top: 0;
-    bottom: 0;
-    width: 75%;
+    right: -10%;
+    top: 50%;
+    transform: translateY(-50%) scale(0.55);
+    transform-origin: center right;
+    width: 100%;
     min-width: auto !important;
     min-height: auto !important;
     z-index: 1;
@@ -278,8 +279,8 @@
   }
 
   .hero-robot {
-    right: -35%;
-    width: 80%;
+    right: -12%;
+    transform: translateY(-50%) scale(0.5);
   }
 }
 
@@ -307,7 +308,7 @@
   }
 
   .hero-robot {
-    right: -40%;
-    width: 85%;
+    right: -15%;
+    transform: translateY(-50%) scale(0.45);
   }
 }
