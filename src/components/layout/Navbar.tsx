@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { ThemeToggle } from '../ui/ThemeToggle';
 import { MagneticButton } from '../ui/MagneticButton';
 import './Navbar.css';
 
@@ -77,7 +76,6 @@ export function Navbar() {
 
         {/* Desktop Right */}
         <div className="navbar-right">
-          <ThemeToggle />
           <MagneticButton
             as="a"
             href="/contact"
