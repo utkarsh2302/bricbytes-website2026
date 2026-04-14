@@ -192,15 +192,15 @@
 @media (max-width: 640px) {
   .hero {
     min-height: 100vh;
-    padding-top: 8rem;
+    padding-top: 5rem;
     padding-bottom: 2rem;
     overflow: hidden;
   }
 
   .hero-inner {
     flex-direction: row;
-    align-items: center;
-    padding: 1.5rem 0;
+    align-items: flex-start;
+    padding: 1rem 0;
     gap: 0;
     width: 100%;
     overflow: hidden;
@@ -213,6 +213,7 @@
     z-index: 3;
     align-items: flex-start;
     padding-left: 1rem;
+    padding-top: 1rem;
   }
 
   .hero-text-wrapper {
@@ -247,11 +248,12 @@
   .hero-robot {
     flex: 0 0 40%;
     width: 40%;
-    height: 70vh;
+    height: 90vh;
     overflow: hidden;
     position: relative;
     min-width: auto !important;
     min-height: auto !important;
+    margin-top: -2rem;
   }
 
   .hero-scroll {
