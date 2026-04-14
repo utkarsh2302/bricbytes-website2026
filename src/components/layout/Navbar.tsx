@@ -122,7 +122,6 @@ export function Navbar() {
               </motion.div>
             ))}
             <div className="navbar-mobile-footer">
-              <ThemeToggle />
               <Link to="/contact" className="btn-primary" onClick={() => setMobileOpen(false)}>
                 Book Demo
               </Link>
