@@ -194,6 +194,7 @@
     min-height: 100vh;
     padding-top: 8rem;
     padding-bottom: 2rem;
+    overflow: hidden;
   }
 
   .hero-inner {
@@ -226,6 +227,7 @@
 
   .hero-text-section {
     min-height: auto;
+    z-index: 10;
   }
 
   .hero-tagline {
@@ -234,7 +236,13 @@
   }
 
   .hero-robot {
-    max-width: 280px;
+    max-width: 400px;
+    height: 300px;
+    overflow: hidden;
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    z-index: 1;
   }
 
   .hero-scroll {
@@ -246,6 +254,7 @@
   .hero {
     padding-top: 8rem;
     padding-bottom: 2rem;
+    overflow: hidden;
   }
 
   .hero-text-wrapper {
@@ -253,9 +262,13 @@
   }
 
   .hero-robot {
-    max-width: 250px;
-    height: 250px;
+    max-width: 350px;
+    height: 280px;
     overflow: hidden;
+    position: absolute;
+    right: -80px;
+    bottom: 0;
+    z-index: 1;
   }
 
   .hero-title-minimal {
