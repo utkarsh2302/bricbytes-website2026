@@ -1,4 +1,4 @@
-import { lazy, Suspense, useRef } from 'react';
+import { lazy, Suspense, useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import './Hero.css';
 
@@ -7,6 +7,15 @@ const Spline = lazy(() => import('@splinetool/react-spline'));
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
   const splineSceneUrl = 'https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode';
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile viewport
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 640);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Scroll parallax
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] });
@@ -34,7 +43,11 @@ export function Hero() {
         {/* ── Right: 3D Robot (Spline) ── */}
         <motion.div
           className="hero-robot"
-          style={{ y: robotY, opacity: robotOpacity, minWidth: '1200px', minHeight: '1200px' }}
+          style={{
+            y: robotY,
+            opacity: robotOpacity,
+            ...(isMobile ? {} : { minWidth: '1200px', minHeight: '1200px' })
+          }}
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}

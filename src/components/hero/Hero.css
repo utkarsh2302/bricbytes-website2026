@@ -244,11 +244,12 @@
     overflow: hidden;
     margin-left: -80px;
     position: relative;
-  }
-
-  .hero-robot > div {
     min-width: auto !important;
     min-height: auto !important;
+  }
+
+  .hero-robot > div,
+  .hero-robot canvas {
     width: 100% !important;
     height: 100% !important;
   }
@@ -275,11 +276,12 @@
     overflow: hidden;
     margin-left: -70px;
     position: relative;
-  }
-
-  .hero-robot > div {
     min-width: auto !important;
     min-height: auto !important;
+  }
+
+  .hero-robot > div,
+  .hero-robot canvas {
     width: 100% !important;
     height: 100% !important;
   }
@@ -342,11 +344,12 @@
     overflow: hidden;
     margin-left: -60px;
     position: relative;
-  }
-
-  .hero-robot > div {
     min-width: auto !important;
     min-height: auto !important;
+  }
+
+  .hero-robot > div,
+  .hero-robot canvas {
     width: 100% !important;
     height: 100% !important;
   }
