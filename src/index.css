@@ -168,9 +168,33 @@ img,video { max-width:100%; height:auto; display:block; }
   padding: 0 2rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
 .section-padding {
   padding: 7rem 0;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-padding {
+    padding: 2.5rem 0;
+  }
 }
 
 /* ===== Section Headers ===== */

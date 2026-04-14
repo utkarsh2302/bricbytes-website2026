@@ -90,7 +90,7 @@
 .hero-tagline {
   font-size: 1.25rem;
   font-weight: 500;
-  color: #425466;
+  color: #b0b0b0;
   margin-top: 1rem;
   margin-bottom: 0;
   letter-spacing: -0.01em;
@@ -122,7 +122,7 @@
   will-change: transform, opacity;
   transform: translateZ(0);
   z-index: 2;
-  margin-top: -150px;
+  margin-top: -100px;
 }
 
 /* ── Scroll indicator ── */
@@ -267,34 +267,41 @@
 @media (max-width: 380px) {
   .hero {
     min-height: 100vh;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .hero-inner {
-    min-height: 100vh;
+    padding: 1rem 0;
+    gap: 0.5rem;
+  }
+
+  .hero-text-wrapper {
+    margin-top: -40px;
   }
 
   .hero-title-minimal {
-    font-size: clamp(2.2rem, 12vw, 3rem);
-    margin-bottom: 0.75rem;
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+    margin-bottom: 0.6rem;
   }
 
   .hero-horizon-line {
-    width: 220px;
-    height: 1.5px;
+    width: 150px;
+    height: 1px;
   }
 
   @keyframes expandUnderline {
     to {
-      width: 220px;
+      width: 150px;
     }
   }
 
-  .hero-sparkles-below {
-    width: 100%;
-    height: 100%;
+  .hero-tagline {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
   }
 
   .hero-robot {
-    max-width: 260px;
+    max-width: 200px;
   }
 }
