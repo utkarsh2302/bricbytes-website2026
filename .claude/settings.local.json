@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx vercel:*)"
+      "Bash(npx vercel:*)",
+      "Bash(curl -s https://brickbytes-2026.vercel.app)",
+      "Bash(curl -I https://brickbytes-2026.vercel.app)",
+      "Bash(curl -I https://brickbytes-2026-5n5904dbh-utkarsh2302s-projects.vercel.app)"
     ]
   }
 }

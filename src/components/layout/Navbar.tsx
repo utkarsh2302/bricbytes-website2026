@@ -14,6 +14,8 @@ const navLinks = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [navHidden, setNavHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
 
   // Scroll progress bar
@@ -21,10 +23,23 @@ export function Navbar() {
   const scaleX = useSpring(scrollYProgress, { stiffness: 200, damping: 30 });
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrolled(currentScrollY > 20);
+
+      // Hide/show navbar on mobile based on scroll direction
+      if (window.innerWidth <= 768) {
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setNavHidden(true); // Scrolling down
+        } else {
+          setNavHidden(false); // Scrolling up
+        }
+        setLastScrollY(currentScrollY);
+      }
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [lastScrollY]);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -40,7 +55,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''} ${navHidden ? 'navbar-hidden' : ''}`}>
       {/* Scroll progress bar */}
       <motion.div
         style={{ scaleX, transformOrigin: '0%' }}
