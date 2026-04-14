@@ -247,15 +247,18 @@
     position: relative;
     min-width: auto !important;
     min-height: auto !important;
-    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-    border: 3px solid red;
+    overflow: hidden;
   }
 
-  .hero-robot > div,
+  .hero-robot > div {
+    width: 200% !important;
+    height: 100% !important;
+    transform: translateX(-50%);
+  }
+
   .hero-robot canvas {
     width: 100% !important;
     height: 100% !important;
-    margin-left: 0 !important;
   }
 
   .hero-scroll {
@@ -281,14 +284,18 @@
     position: relative;
     min-width: auto !important;
     min-height: auto !important;
-    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    overflow: hidden;
   }
 
-  .hero-robot > div,
+  .hero-robot > div {
+    width: 200% !important;
+    height: 100% !important;
+    transform: translateX(-50%);
+  }
+
   .hero-robot canvas {
     width: 100% !important;
     height: 100% !important;
-    margin-left: 0 !important;
   }
 
   .hero-title-minimal {
@@ -352,13 +359,17 @@
     position: relative;
     min-width: auto !important;
     min-height: auto !important;
-    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    overflow: hidden;
   }
 
-  .hero-robot > div,
+  .hero-robot > div {
+    width: 200% !important;
+    height: 100% !important;
+    transform: translateX(-50%);
+  }
+
   .hero-robot canvas {
     width: 100% !important;
     height: 100% !important;
-    margin-left: 0 !important;
   }
 }
