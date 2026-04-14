@@ -207,8 +207,8 @@
   }
 
   .hero-text-section {
-    flex: 0 0 40%;
-    width: 40%;
+    flex: 0 0 60%;
+    width: 60%;
     min-height: auto;
     z-index: 3;
     align-items: flex-start;
@@ -245,8 +245,8 @@
   }
 
   .hero-robot {
-    flex: 0 0 60%;
-    width: 60%;
+    flex: 0 0 40%;
+    width: 40%;
     height: 70vh;
     overflow: hidden;
     position: relative;
