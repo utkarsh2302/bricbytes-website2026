@@ -191,16 +191,16 @@
 
 @media (max-width: 640px) {
   .hero {
-    min-height: 100vh;
-    padding-top: 5rem;
-    padding-bottom: 2rem;
+    min-height: auto;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
     overflow: hidden;
   }
 
   .hero-inner {
     flex-direction: row;
     align-items: flex-start;
-    padding: 1rem 0;
+    padding: 0;
     gap: 0;
     width: 100%;
     overflow: hidden;
@@ -263,8 +263,8 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding-top: 8rem;
-    padding-bottom: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 0;
     overflow: hidden;
   }
 
@@ -291,14 +291,14 @@
 
 @media (max-width: 380px) {
   .hero {
-    min-height: 100vh;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    min-height: auto;
+    padding-top: 4rem;
+    padding-bottom: 0;
     overflow: hidden;
   }
 
   .hero-inner {
-    padding: 1rem 0;
+    padding: 0;
   }
 
   .hero-title-minimal {
