@@ -10,9 +10,10 @@
 
 ### 2. Automatic Vercel Deployment
 - GitHub → main branch push → **auto-deploys to Vercel in ~1-2 minutes**
+- ✅ **Only push to GitHub — Vercel is linked and deploys automatically**
+- ❌ Never use Vercel CLI manually (`vercel deploy`) — GitHub push is the only deploy method
 - No manual Vercel CLI needed — just `git push origin main`
-- Monitor https://vercel.com/brickbytes (or your Vercel dashboard) to confirm deployment
-- Check deployment logs if something looks wrong
+- Check deployment logs in Vercel dashboard if something looks wrong
 
 ### 3. Dark Mode Persistence (Critical)
 **Dark mode must be forced BEFORE React renders:**
