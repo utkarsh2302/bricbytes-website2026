@@ -242,17 +242,18 @@
     text-align: left;
   }
 
-  /* Robot sits absolutely on the right, overlaps text slightly */
+  /* Robot absolutely positioned relative to full-width .hero section */
   .hero-robot {
     position: absolute;
-    right: 10%;
-    top: 0;
+    right: -30vw;
+    top: 60px;
     transform: scale(0.55);
     transform-origin: top right;
-    width: 100%;
+    width: 100vw;
     min-width: auto !important;
     min-height: auto !important;
     z-index: 1;
+    pointer-events: none;
   }
 
   .hero-scroll {

@@ -30,19 +30,19 @@ export function Hero() {
             <p className="hero-tagline">Tech inside real estate simplified</p>
           </motion.div>
         </div>
+      </motion.div>
 
-        {/* ── Right: 3D Robot (Spline) ── */}
-        <motion.div
-          className="hero-robot"
-          style={{ y: robotY, opacity: robotOpacity, minWidth: '1200px', minHeight: '1200px' }}
-          initial={{ opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <Suspense fallback={<div style={{ width: '100%', height: '100%' }} />}>
-            <Spline scene={splineSceneUrl} />
-          </Suspense>
-        </motion.div>
+      {/* ── Right: 3D Robot (Spline) — outside container for full-width positioning ── */}
+      <motion.div
+        className="hero-robot"
+        style={{ y: robotY, opacity: robotOpacity, minWidth: '1200px', minHeight: '1200px' }}
+        initial={{ opacity: 0, scale: 0.92 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <Suspense fallback={<div style={{ width: '100%', height: '100%' }} />}>
+          <Spline scene={splineSceneUrl} />
+        </Suspense>
       </motion.div>
 
       {/* Scroll indicator */}
