@@ -245,7 +245,7 @@
   /* Robot absolutely positioned relative to full-width .hero section */
   .hero-robot {
     position: absolute;
-    right: -30vw;
+    right: -60vw;
     top: 60px;
     transform: scale(0.55);
     transform-origin: top right;
