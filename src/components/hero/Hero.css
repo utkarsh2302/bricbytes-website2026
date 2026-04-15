@@ -245,7 +245,7 @@
   /* Robot sits absolutely on the right, overlaps text slightly */
   .hero-robot {
     position: absolute;
-    right: -10%;
+    right: -30%;
     top: 0;
     transform: scale(0.55);
     transform-origin: top right;
