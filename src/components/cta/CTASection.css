@@ -1,43 +1,20 @@
 .cta-section {
-  background: #06050f;
+  background: #000000;
   color: #ffffff;
   position: relative;
   overflow: hidden;
 }
 
-/* Gradient mesh orbs */
 .cta-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 120% at -10% 50%, rgba(80,70,229,0.5) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 100% at 110% 50%, rgba(14,165,233,0.35) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 60% at 50%  10%, rgba(124,58,237,0.25) 0%, transparent 60%);
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
-/* Gold particles layer */
 .cta-sparkles {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.4;
-  will-change: opacity;
-  transform: translateZ(0);
+  display: none;
 }
 
-/* Grain overlay */
 .cta-section::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.5;
+  display: none;
 }
 
 .cta-inner {
@@ -76,20 +53,17 @@
 }
 
 .cta-title {
-  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
-  font-weight: 900;
-  letter-spacing: -0.05em;
-  line-height: 1.0;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.10;
   color: #ffffff;
 }
 
 /* Gradient highlight on last word */
 .cta-title em {
   font-style: normal;
-  background: linear-gradient(135deg, #a78bfa, #38bdf8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #0071e3;
 }
 
 .cta-subtitle {
@@ -111,45 +85,42 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #ffffff;
-  color: #0a0a1a;
-  padding: 0.9rem 1.85rem;
-  border-radius: var(--radius-pill);
-  font-weight: 700;
-  font-size: 0.9375rem;
+  background: #0071e3;
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 17px;
   border: none;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.374px;
   white-space: nowrap;
   transition: all var(--transition-normal);
-  box-shadow: 0 4px 20px rgba(255,255,255,0.15);
+  box-shadow: none;
 }
 .cta-btn-primary:hover {
-  background: #f0f0ff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(255,255,255,0.25);
+  opacity: 0.85;
+  transform: scale(1.02);
 }
 
 .cta-btn-secondary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255,255,255,0.06);
-  color: rgba(255,255,255,0.75);
-  padding: 0.9rem 1.85rem;
-  border-radius: var(--radius-pill);
-  font-weight: 600;
-  font-size: 0.9375rem;
-  border: 1px solid rgba(255,255,255,0.15);
-  letter-spacing: -0.01em;
+  background: transparent;
+  color: #2997ff;
+  padding: 8px 15px;
+  border-radius: 980px;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid #2997ff;
+  letter-spacing: -0.374px;
   white-space: nowrap;
   transition: all var(--transition-normal);
-  backdrop-filter: blur(8px);
 }
 .cta-btn-secondary:hover {
   color: #ffffff;
-  border-color: rgba(255,255,255,0.35);
-  background: rgba(255,255,255,0.1);
-  transform: translateY(-1px);
+  background: #2997ff;
+  transform: scale(1.02);
 }
 
 .cta-note {
