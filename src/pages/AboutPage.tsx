@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { AnimatedGrid } from '../components/motion-graphics/AnimatedGrid';
+import { AnimatedParticles } from '../components/motion-graphics/AnimatedParticles';
 import './AboutPage.css';
 
 export function AboutPage() {
@@ -11,8 +13,10 @@ export function AboutPage() {
       transition={{ duration: 0.4, ease: [0.215, 0.61, 0.355, 1] }}
     >
       {/* Company Story */}
-      <section className="about-story section-padding">
-        <div className="container">
+      <section className="about-story section-padding relative">
+        <AnimatedGrid />
+        <AnimatedParticles />
+        <div className="container relative z-10">
           <div className="about-story-content">
             <motion.div
               initial={{ opacity: 0, y: 16 }}

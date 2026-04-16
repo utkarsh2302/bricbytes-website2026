@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { MessageCircle, Mail, ArrowUpRight } from 'lucide-react';
+import { AnimatedLines } from '../components/motion-graphics/AnimatedLines';
+import { AnimatedParticles } from '../components/motion-graphics/AnimatedParticles';
 import './ContactPage.css';
 
 export function ContactPage() {
@@ -11,8 +13,10 @@ export function ContactPage() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4, ease: [0.215, 0.61, 0.355, 1] }}
     >
-      <section className="contact-section section-padding">
-        <div className="container">
+      <section className="contact-section section-padding relative">
+        <AnimatedLines />
+        <AnimatedParticles />
+        <div className="container relative z-10">
           <div className="contact-content">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
