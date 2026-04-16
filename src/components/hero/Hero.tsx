@@ -1,6 +1,5 @@
 import { lazy, Suspense, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { PositionEditor } from './PositionEditor';
 import './Hero.css';
 
 const Spline = lazy(() => import('@splinetool/react-spline'));
@@ -17,29 +16,26 @@ export function Hero() {
 
   return (
     <section className="hero hero-minimal" ref={heroRef}>
-      <motion.div className="hero-inner container" style={{ y: contentY }}>
-        {/* ── Left: BrickBytes + Line ── */}
-        <div className="hero-text-section">
-          <motion.div
-            className="hero-text-wrapper"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <h1 className="hero-title-minimal">BrickBytes</h1>
-            <div className="hero-horizon-line" />
-            <p className="hero-tagline">Tech inside real estate simplified</p>
+      {/* Center content */}
+      <motion.div
+        className="hero-center-content"
+        style={{ y: contentY }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <h1 className="hero-title-minimal">BrickBytes</h1>
+        <div className="hero-horizon-line" />
+        <p className="hero-tagline">Tech inside real estate simplified</p>
 
-            {/* CTAs */}
-            <div className="hero-ctas">
-              <button className="btn-primary">Get Started</button>
-              <button className="btn-secondary">Book Demo</button>
-            </div>
-
-            {/* Trusted by text */}
-            <p className="hero-trusted">Trusted by 50x builders across India</p>
-          </motion.div>
+        {/* CTAs */}
+        <div className="hero-ctas">
+          <button className="btn-primary">Get Started</button>
+          <button className="btn-secondary">Book Demo</button>
         </div>
+
+        {/* Trusted by text */}
+        <p className="hero-trusted">Trusted by 50x builders across India</p>
       </motion.div>
 
       {/* ── Right: 3D Robot (Spline) — outside container for full-width positioning ── */}
@@ -69,9 +65,6 @@ export function Hero() {
           transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
         />
       </motion.div>
-
-      {/* Position Editor (Dev Tool) */}
-      <PositionEditor />
     </section>
   );
 }
