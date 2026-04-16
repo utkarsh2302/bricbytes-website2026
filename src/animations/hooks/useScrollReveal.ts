@@ -58,7 +58,8 @@ export function useScrollReveal(options: UseScrollRevealOptions = {}) {
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (ScrollTrigger.getAll() as any[]).forEach((trigger: any) => {
         if (trigger.trigger === element) {
           trigger.kill();
         }

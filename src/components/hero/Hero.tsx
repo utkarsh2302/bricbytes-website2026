@@ -51,14 +51,14 @@ export function Hero() {
         <div className="hero-horizon-line" />
         <p className="hero-tagline">Tech inside real estate simplified</p>
 
+        {/* Trusted badge */}
+        <p className="hero-trusted">Trusted by 50x builders across India</p>
+
         {/* CTAs */}
         <div className="hero-ctas">
           <button className="btn-primary">Get Started</button>
           <button className="btn-secondary">Book Demo</button>
         </div>
-
-        {/* Trusted by text */}
-        <p className="hero-trusted">Trusted by 50x builders across India</p>
       </motion.div>
 
       {/* ── Right: 3D Robot (Spline) — outside container for full-width positioning ── */}
