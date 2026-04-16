@@ -2,6 +2,7 @@ import { ArrowRight, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { SparklesCore } from '../ui/sparkles';
+import { MagneticButton } from '../ui/MagneticButton';
 import './CTASection.css';
 
 export function CTASection() {
@@ -65,12 +66,12 @@ export function CTASection() {
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+            <MagneticButton>
               <Link to="/contact" className="cta-btn-primary">
                 Book a Demo <ArrowRight size={15} />
               </Link>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+            </MagneticButton>
+            <MagneticButton>
               <a
                 href="https://brickbytes360-bd9c.vercel.app/"
                 target="_blank"
@@ -79,7 +80,7 @@ export function CTASection() {
               >
                 <Play size={13} /> Try Live Demo
               </a>
-            </motion.div>
+            </MagneticButton>
           </motion.div>
         </motion.div>
       </div>

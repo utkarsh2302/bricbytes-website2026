@@ -1,5 +1,6 @@
 import { Map, Eye, Bot, Activity } from 'lucide-react';
 import { motion, type Variants } from 'framer-motion';
+import { TiltCard } from '../ui/TiltCard';
 import './Features.css';
 
 const features = [
@@ -46,28 +47,32 @@ export function Features() {
           viewport={{ once: true, margin: '-60px' }}
         >
           {features.map((f) => (
-            <motion.div
+            <TiltCard
               key={f.num}
               className="feature-bento-card"
-              variants={card}
-              whileHover={{ backgroundColor: 'var(--bg-tertiary)', scale: 1.005 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+              tiltStrength={6}
             >
-              <div className="feature-bento-top">
-                <span className="feature-bento-num">{f.num}</span>
-                <motion.div
-                  className="feature-bento-icon"
-                  whileHover={{ scale: 1.15, rotate: 5, borderColor: 'var(--border-strong)' }}
-                  transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                >
-                  <f.icon size={16} />
-                </motion.div>
-              </div>
-              <h3 className="feature-bento-title">{f.title}</h3>
-              <p className="feature-bento-desc">{f.desc}</p>
-              <span className="feature-bento-tag">{f.tag}</span>
-            </motion.div>
+              <motion.div
+                variants={card}
+                whileHover={{ backgroundColor: 'var(--bg-tertiary)', scale: 1.005 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+              >
+                <div className="feature-bento-top">
+                  <span className="feature-bento-num">{f.num}</span>
+                  <motion.div
+                    className="feature-bento-icon"
+                    whileHover={{ scale: 1.15, rotate: 5, borderColor: 'var(--border-strong)' }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                  >
+                    <f.icon size={16} />
+                  </motion.div>
+                </div>
+                <h3 className="feature-bento-title">{f.title}</h3>
+                <p className="feature-bento-desc">{f.desc}</p>
+                <span className="feature-bento-tag">{f.tag}</span>
+              </motion.div>
+            </TiltCard>
           ))}
         </motion.div>
       </div>

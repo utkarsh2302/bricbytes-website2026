@@ -1,9 +1,18 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Linkedin, Twitter, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { setupFooterAnimation } from '../../animations/effects/footerAnim';
 import './Footer.css';
 
 export function Footer() {
+  useEffect(() => {
+    setupFooterAnimation({
+      footerSelector: '.footer',
+      contentSelectors: ['.footer-brand', '.footer-col', '.footer-bottom'],
+    });
+  }, []);
+
   return (
     <footer className="footer">
       <div className="container">

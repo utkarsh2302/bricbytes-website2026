@@ -281,3 +281,5 @@ export function GlobeScene({ theme = 'light' }: GlobeSceneProps) {
     <div ref={mountRef} style={{ width: '100%', height: '100%', position: 'relative' }} />
   );
 }
+
+export default GlobeScene;
