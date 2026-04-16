@@ -1,7 +1,7 @@
 .footer {
-  background: var(--bg-primary);
-  border-top: 1px solid var(--border);
-  padding: 3.5rem 0 2rem;
+  background: var(--bg-secondary);
+  border: none;
+  padding: 4rem 0 3rem;
 }
 
 .footer-grid {
@@ -9,7 +9,7 @@
   grid-template-columns: 2fr 1fr 1fr;
   gap: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid var(--border);
+  border: none;
   margin-bottom: 1.5rem;
 }
 
@@ -52,7 +52,7 @@
 .footer-social a {
   width: 36px;
   height: 36px;
-  border: 1px solid var(--border-mid);
+  border: none;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
