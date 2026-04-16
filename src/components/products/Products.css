@@ -1,18 +1,16 @@
 .products {
   background: var(--bg-primary);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  border: none;
 }
 
 .products-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  background: var(--border-mid);
-  border: 1px solid var(--border-mid);
+  gap: 2rem;
+  background: transparent;
+  border: none;
   border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  overflow: visible;
 }
 
 .product-card {
@@ -31,17 +29,9 @@
 }
 /* Top accent line */
 .product-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--accent-gradient);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.35s var(--ease-base);
+  display: none;
 }
-.product-card:hover::before { transform: scaleX(1); }
-.product-card:hover { background: var(--bg-secondary); }
+.product-card:hover { background: var(--bg-tertiary); }
 .product-card:hover .product-arrow { transform: translate(4px, -4px); color: var(--accent-primary); }
 
 .product-card-top {
@@ -71,25 +61,22 @@
   transition: transform var(--transition-fast), color var(--transition-fast);
 }
 
-/* Giant gradient number */
+/* Giant decorative number */
 .product-num {
   font-size: 5rem;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: -0.08em;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-primary);
   line-height: 1;
   font-variant-numeric: tabular-nums;
-  opacity: 0.2;
-  transition: opacity var(--transition-normal);
+  opacity: 0.25;
+  transition: opacity var(--transition-fast);
 }
-.product-card:hover .product-num { opacity: 0.7; }
+.product-card:hover .product-num { opacity: 0.4; }
 
 .product-title {
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: -0.05em;
   line-height: 1.1;
 }
@@ -106,7 +93,7 @@
   align-items: center;
   gap: 0.4rem;
   font-size: 0.8125rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--accent-primary);
   letter-spacing: -0.01em;
   margin-top: auto;
@@ -115,7 +102,7 @@
 .product-card:hover .product-cta { gap: 0.6rem; }
 
 @media (max-width: 640px) {
-  .products-grid { grid-template-columns: 1fr; }
+  .products-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .product-card { padding: 1.75rem 1.25rem; }
   .product-num { font-size: 3.5rem; }
 }
