@@ -35,7 +35,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0;
+  gap: 0.5rem;
   position: relative;
   z-index: 3;
   text-align: center;
@@ -50,7 +50,6 @@
   text-align: center;
   margin: 0;
   padding: 0;
-  margin-bottom: 0.8rem;
 }
 
 /* Cyan accent underline beneath text — glowing */
@@ -80,10 +79,10 @@
   font-size: 1.25rem;
   font-weight: 500;
   color: #b0b0b0;
-  margin-top: 1rem;
-  margin-bottom: 0;
+  margin: 0;
   letter-spacing: -0.01em;
   line-height: 1.6;
+  max-width: 600px;
 }
 
 /* Sparkles spanning full hero background */
@@ -141,6 +140,23 @@
   background: #444444;
 }
 
+.hero-trusted {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 0.875rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .hero-inner {
@@ -155,7 +171,7 @@
 
   .hero-title-minimal {
     font-size: clamp(3.5rem, 8vw, 5rem);
-    margin-bottom: 0.6rem;
+    margin: 0;
   }
 
   .hero-horizon-line {
@@ -207,15 +223,15 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 0;
+    gap: 0.3rem;
     min-height: auto;
   }
 
   .hero-title-minimal {
     font-size: clamp(2.2rem, 9vw, 3rem);
-    font-weight: 900;
+    font-weight: 600;
     letter-spacing: -0.04em;
-    margin: 0 0 0.6rem 0;
+    margin: 0;
     text-align: left;
     line-height: 1.05;
   }
@@ -223,7 +239,7 @@
   .hero-horizon-line {
     width: clamp(120px, 40vw, 180px);
     height: 2.5px;
-    margin: 0 0 0.75rem 0;
+    margin: 0;
     border-radius: 2px;
   }
 
