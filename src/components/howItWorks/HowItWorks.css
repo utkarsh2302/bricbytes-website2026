@@ -1,18 +1,16 @@
 .how-it-works {
   background: var(--bg-primary);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  border: none;
 }
 
 .hiw-steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border: 1px solid var(--border-mid);
+  border: none;
   border-radius: var(--radius-xl);
-  overflow: hidden;
-  background: var(--border-mid);
-  gap: 1px;
-  box-shadow: var(--shadow-md);
+  overflow: visible;
+  background: transparent;
+  gap: 2rem;
 }
 
 .hiw-step {
@@ -27,33 +25,22 @@
   overflow: hidden;
 }
 .hiw-step::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 2px;
-  background: var(--accent-gradient);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s var(--ease-base);
+  display: none;
 }
-.hiw-step:hover::after { transform: scaleX(1); }
-.hiw-step:hover { background: var(--bg-secondary); }
+.hiw-step:hover { background: var(--bg-tertiary); }
 
 /* Giant decorative step number */
 .hiw-step-number {
   font-size: 3.5rem;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: -0.08em;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-primary);
   line-height: 1;
   font-variant-numeric: tabular-nums;
-  opacity: 0.25;
-  transition: opacity var(--transition-normal);
+  opacity: 0.3;
+  transition: opacity var(--transition-fast);
 }
-.hiw-step:hover .hiw-step-number { opacity: 0.8; }
+.hiw-step:hover .hiw-step-number { opacity: 0.5; }
 
 /* Accent icon */
 .hiw-step-icon {
@@ -75,16 +62,15 @@
 .hiw-step:hover .hiw-step-icon {
   background: rgba(80,70,229,0.14);
   border-color: rgba(80,70,229,0.35);
-  box-shadow: 0 4px 16px rgba(80,70,229,0.2);
 }
 [data-theme="dark"] .hiw-step:hover .hiw-step-icon {
   background: rgba(124,111,255,0.18);
-  box-shadow: 0 4px 16px rgba(124,111,255,0.28);
+  border-color: rgba(124,111,255,0.4);
 }
 
 .hiw-step-title {
   font-size: 1.0625rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.03em;
   margin-top: 0.25rem;
 }
@@ -97,12 +83,12 @@
 
 /* Tablet */
 @media (max-width: 900px) and (min-width: 561px) {
-  .hiw-steps { grid-template-columns: repeat(2, 1fr); }
+  .hiw-steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
   .hiw-steps > *:last-child { grid-column: span 2; }
 }
 
 /* Mobile */
 @media (max-width: 560px) {
-  .hiw-steps { grid-template-columns: 1fr; }
+  .hiw-steps { grid-template-columns: 1fr; gap: 1.5rem; }
   .hiw-step { padding: 1.5rem 1.25rem; }
 }
