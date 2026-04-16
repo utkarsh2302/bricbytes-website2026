@@ -49,6 +49,12 @@
 - Use browser DevTools mobile emulator (F12 → toggle device toolbar)
 - Test actual mobile device if possible before final push
 
+### 6. Local Preview Before Deploy
+- **Always preview locally first** using `npm run dev` (running on `http://localhost:5173`)
+- Show changes locally on desktop and mobile views
+- Get approval before pushing to GitHub/Vercel
+- Only push after verifying the changes match requirements exactly
+
 ## Workflow Checklist
 
 Before every commit:
@@ -66,9 +72,18 @@ Before every commit:
 | `index.html` | Dark mode forced before React loads (critical!) |
 | `src/ThemeContext.tsx` | Theme toggle logic, defaults to 'dark' |
 | `src/index.css` | CSS variables for light/dark themes (unused in dark-only mode) |
-| `src/components/hero/Hero.css` | Responsive hero layout, 5 breakpoints |
+| `src/components/hero/Hero.tsx` | Hero component with title, tagline, CTAs, property cards, robot |
+| `src/components/hero/Hero.css` | Responsive hero layout, 5 breakpoints (640px, 480px, 380px) |
 | `.husky/pre-commit` | Build validation gate — prevents broken commits |
 | `package.json` | Scripts: `npm run dev`, `npm run build`, `npm run lint` |
+
+## Mobile Hero Structure (Phone Version @ 640px)
+
+The mobile hero displays:
+- **Left side (60%)**: BrickBytes title, cyan underline, tagline, two CTAs (Get Started + Book Demo), "Trusted by 50x builders across India"
+- **Right side (40%)**: 3D robot scaled at 0.55, positioned with `right: -60vw`
+- **Bottom**: Two property cards (Danube Avi, Regal Palm) with blur backdrop effect, positioned absolutely
+- **z-index layering**: Text (z:3) > Property cards (z:4) > Robot (z:2) > Background (z:0/1)
 
 ## Common Issues & Fixes
 
