@@ -122,6 +122,14 @@ export function MarketingHome() {
         </div>
       </section>
 
+      {/* Architecture Divider 4 */}
+      <section
+        className="section section-padding bg-architecture"
+        style={{ backgroundImage: 'url(/images/architecture-02.jpg)' }}
+      >
+        <div className="container"></div>
+      </section>
+
       {/* Platform Demo Section */}
       <section className="section section-padding bg-secondary">
         <div className="container">
@@ -270,6 +278,14 @@ export function MarketingHome() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Architecture Divider 5 */}
+      <section
+        className="section section-padding bg-architecture"
+        style={{ backgroundImage: 'url(/images/architecture-05.jpg)' }}
+      >
+        <div className="container"></div>
       </section>
 
       {/* Pricing Teaser CTA */}
