@@ -10,6 +10,27 @@
   background: var(--bg-secondary);
 }
 
+/* Architecture image sections */
+.bg-architecture {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.bg-architecture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  pointer-events: none;
+}
+
+.bg-architecture > * {
+  position: relative;
+  z-index: 1;
+}
+
 .bg-dark {
   background: #000000;
 }

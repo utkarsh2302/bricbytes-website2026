@@ -93,6 +93,14 @@ export function MarketingHome() {
     <>
       <Hero />
 
+      {/* Architecture Hero Divider */}
+      <section
+        className="section section-padding bg-architecture"
+        style={{ backgroundImage: 'url(/images/architecture-01.jpg)' }}
+      >
+        <div className="container"></div>
+      </section>
+
       {/* Problem Section */}
       <section className="section section-padding">
         <div className="container">
@@ -183,6 +191,14 @@ export function MarketingHome() {
         </div>
       </section>
 
+      {/* Architecture Divider 2 */}
+      <section
+        className="section section-padding bg-architecture"
+        style={{ backgroundImage: 'url(/images/architecture-03.jpg)' }}
+      >
+        <div className="container"></div>
+      </section>
+
       {/* Admin Panel Section */}
       <section className="section section-padding bg-secondary">
         <div className="container">
@@ -215,6 +231,14 @@ export function MarketingHome() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Architecture Divider 3 */}
+      <section
+        className="section section-padding bg-architecture"
+        style={{ backgroundImage: 'url(/images/architecture-04.jpg)' }}
+      >
+        <div className="container"></div>
       </section>
 
       {/* Stats Section */}
