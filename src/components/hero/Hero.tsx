@@ -1,5 +1,7 @@
-import { lazy, Suspense, useRef } from 'react';
+import { lazy, Suspense, useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { animateHeroEntrance } from '../../animations/effects/heroEntranceAnim';
+import { setupCTAButtonAnimation } from '../../animations/effects/ctaButtonAnim';
 import './Hero.css';
 
 const Spline = lazy(() => import('@splinetool/react-spline'));
@@ -13,6 +15,27 @@ export function Hero() {
   const robotY = useTransform(scrollYProgress, [0, 1], [0, 80]);
   const robotOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 40]);
+
+  // Hero entrance animation on mount
+  useEffect(() => {
+    if (heroRef.current) {
+      animateHeroEntrance({
+        titleSelector: '.hero-title-minimal',
+        underlineSelector: '.hero-horizon-line',
+        taglineSelector: '.hero-tagline',
+        ctasSelector: '.hero-ctas button',
+        trustedSelector: '.hero-trusted',
+      });
+    }
+  }, []);
+
+  // CTA button animations
+  useEffect(() => {
+    const buttons = document.querySelectorAll('.hero-ctas button');
+    buttons.forEach((button, index) => {
+      setupCTAButtonAnimation({ buttonSelector: `.hero-ctas button:nth-child(${index + 1})` });
+    });
+  }, []);
 
   return (
     <section className="hero hero-minimal" ref={heroRef}>

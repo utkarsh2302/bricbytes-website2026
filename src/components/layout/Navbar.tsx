@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { MagneticButton } from '../ui/MagneticButton';
+import { initializeNavbarAnimation } from '../../animations/effects/navbarAnim';
 import './Navbar.css';
 
 const navLinks = [
@@ -49,6 +50,17 @@ export function Navbar() {
       prevPathRef.current = location.pathname;
     }
   }, [location.pathname]);
+
+  // Initialize navbar animations
+  useEffect(() => {
+    const cleanup = initializeNavbarAnimation({
+      navbarSelector: '.navbar',
+      logoSelector: '.navbar-logo',
+      linksSelector: '.navbar-link',
+      scrollThreshold: 20,
+    });
+    return cleanup;
+  }, []);
 
   const handleNavClick = (path: string) => {
     if (path.startsWith('/#')) {
