@@ -195,6 +195,7 @@
     padding-top: 60px;
     padding-bottom: 0;
     overflow: hidden;
+    position: relative;
   }
 
   .hero-inner {
@@ -209,27 +210,32 @@
 
   .hero-text-section {
     flex: 0 0 auto;
-    width: 65%;
+    width: 60%;
     min-height: auto;
     z-index: 3;
     align-items: flex-start;
     padding-left: 1.25rem;
+    padding-top: 1.5rem;
   }
 
   .hero-text-wrapper {
     margin-top: 0;
     align-items: flex-start;
+    display: flex;
+    flex-direction: column;
   }
 
   .hero-title-minimal {
     font-size: clamp(2rem, 8vw, 2.8rem);
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
     text-align: left;
+    line-height: 1.1;
   }
 
   .hero-horizon-line {
     width: 160px;
-    height: 1px;
+    height: 3px;
+    margin-bottom: 0.8rem;
   }
 
   @keyframes expandUnderline {
@@ -237,23 +243,118 @@
   }
 
   .hero-tagline {
-    font-size: 0.85rem;
-    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
     text-align: left;
+    line-height: 1.5;
+  }
+
+  /* CTAs */
+  .hero-ctas {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .hero-ctas .btn-primary {
+    padding: 0.75rem 1.25rem;
+    background: #0071e3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .hero-ctas .btn-secondary {
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    color: #b0b0b0;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  /* Trusted by text */
+  .hero-trusted {
+    font-size: 0.75rem;
+    color: #888;
+    margin: 0;
+    text-align: left;
+    letter-spacing: 0.02em;
   }
 
   /* Robot absolutely positioned relative to full-width .hero section */
   .hero-robot {
     position: absolute;
     right: -60vw;
-    top: 60px;
+    top: 80px;
     transform: scale(0.55);
     transform-origin: top right;
     width: 100vw;
     min-width: auto !important;
     min-height: auto !important;
-    z-index: 1;
+    z-index: 2;
     pointer-events: none;
+  }
+
+  /* Property cards */
+  .hero-property-cards {
+    position: absolute;
+    bottom: 2rem;
+    left: 1.25rem;
+    right: 1.25rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 4;
+  }
+
+  .property-card {
+    flex: 1;
+    background: rgba(30, 30, 40, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 140px;
+  }
+
+  .property-image {
+    width: 100%;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .property-info {
+    padding: 0.75rem;
+  }
+
+  .property-info h3 {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .property-price {
+    margin: 0.25rem 0 0;
+    font-size: 0.8rem;
+    color: #0071e3;
+    font-weight: 600;
+  }
+
+  .property-meta {
+    margin: 0.25rem 0 0;
+    font-size: 0.7rem;
+    color: #888;
   }
 
   .hero-scroll {

@@ -28,7 +28,41 @@ export function Hero() {
             <h1 className="hero-title-minimal">BrickBytes</h1>
             <div className="hero-horizon-line" />
             <p className="hero-tagline">Tech inside real estate simplified</p>
+
+            {/* CTAs */}
+            <div className="hero-ctas">
+              <button className="btn-primary">Get Started</button>
+              <button className="btn-secondary">Book Demo</button>
+            </div>
+
+            {/* Trusted by text */}
+            <p className="hero-trusted">Trusted by 50x builders across India</p>
           </motion.div>
+        </div>
+      </motion.div>
+
+      {/* Property cards (phone version only) */}
+      <motion.div
+        className="hero-property-cards"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6, duration: 0.8 }}
+      >
+        <div className="property-card">
+          <div className="property-image" style={{ backgroundImage: 'url(data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="120"%3E%3Crect fill="%23333" width="200" height="120"/%3E%3C/svg%3E)' }} />
+          <div className="property-info">
+            <h3>Danube Avi</h3>
+            <p className="property-price">$720,850</p>
+            <p className="property-meta">2 Bed • Residential</p>
+          </div>
+        </div>
+        <div className="property-card">
+          <div className="property-image" style={{ backgroundImage: 'url(data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="120"%3E%3Crect fill="%23444" width="200" height="120"/%3E%3C/svg%3E)' }} />
+          <div className="property-info">
+            <h3>Regal Palm</h3>
+            <p className="property-price">$465,000</p>
+            <p className="property-meta">23 Active Listings</p>
+          </div>
         </div>
       </motion.div>
 
