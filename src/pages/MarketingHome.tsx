@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, MapPin, Users, TrendingUp, MapPinCheck } from 'lucide-react';
+import { ArrowRight, MapPin, Users, TrendingUp } from 'lucide-react';
 import { Hero } from '../components/hero/Hero';
 import { ExpandableCard } from '../components/marketing/ExpandableCard';
 import './MarketingHome.css';

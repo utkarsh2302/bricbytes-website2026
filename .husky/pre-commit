@@ -1,7 +1,15 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "🔍 Running build check before commit..."
+echo "🔍 Running lint check..."
+npm run lint
+
+if [ $? -ne 0 ]; then
+  echo "❌ Lint failed! Fix errors before committing."
+  exit 1
+fi
+
+echo "🔍 Running type check + build..."
 npm run build
 
 if [ $? -ne 0 ]; then
@@ -9,4 +17,4 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "✅ Build successful! Proceeding with commit."
+echo "✅ All checks passed! Proceeding with commit."

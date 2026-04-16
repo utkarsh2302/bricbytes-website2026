@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
@@ -17,6 +17,7 @@ export function Navbar() {
   const [navHidden, setNavHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
+  const prevPathRef = useRef<string>(location.pathname);
 
   // Scroll progress bar
   const { scrollYProgress } = useScroll();
@@ -42,7 +43,11 @@ export function Navbar() {
   }, [lastScrollY]);
 
   useEffect(() => {
-    setMobileOpen(false);
+    if (prevPathRef.current !== location.pathname) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setMobileOpen(false);
+      prevPathRef.current = location.pathname;
+    }
   }, [location.pathname]);
 
   const handleNavClick = (path: string) => {

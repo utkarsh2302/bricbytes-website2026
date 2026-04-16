@@ -46,6 +46,7 @@ export function MagneticButton({
 
   return (
     <Component
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ref={ref as any}
       className={className}
       style={{ ...style, x: springX, y: springY }}

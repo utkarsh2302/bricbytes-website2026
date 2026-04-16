@@ -5,12 +5,7 @@ import { useTheme } from '@/ThemeContext'
 
 const GlobeScene = lazy(() => import('@/components/hero/GlobeScene').then(m => ({ default: m.GlobeScene })))
 
-interface SplineSceneProps {
-  scene?: string
-  className?: string
-}
-
-export function SplineScene({ className }: SplineSceneProps) {
+export function SplineScene(): React.ReactNode {
   const { theme } = useTheme()
 
   return (

@@ -7,7 +7,6 @@ import {
   AmbientLight,
   DirectionalLight,
   PointLight,
-  Color,
   MeshPhongMaterial,
 } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
