@@ -3,6 +3,20 @@
   min-height: 100vh;
 }
 
+/* Cyan accent top bar */
+.broker-page .section:first-of-type {
+  position: relative;
+}
+
+.broker-page .section:first-of-type::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #32ade6, transparent);
+  z-index: 1;
+}
+
 .section {
   width: 100%;
   padding: 0;

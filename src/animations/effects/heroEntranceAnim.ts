@@ -9,88 +9,79 @@ interface HeroEntranceOptions {
 }
 
 export function animateHeroEntrance(options: HeroEntranceOptions) {
-  const {
-    titleSelector,
-    underlineSelector,
-    taglineSelector,
-    ctasSelector,
-    trustedSelector,
-  } = options;
+  const { titleSelector, underlineSelector, taglineSelector, ctasSelector, trustedSelector } = options;
 
-  const title = document.querySelector(titleSelector) as HTMLElement;
+  const title    = document.querySelector(titleSelector)  as HTMLElement;
   const underline = document.querySelector(underlineSelector) as HTMLElement;
-  const tagline = document.querySelector(taglineSelector) as HTMLElement;
-  const ctas = document.querySelectorAll(ctasSelector) as NodeListOf<HTMLElement>;
-  const trusted = document.querySelector(trustedSelector) as HTMLElement;
+  const tagline  = document.querySelector(taglineSelector) as HTMLElement;
+  const ctas     = document.querySelectorAll(ctasSelector) as NodeListOf<HTMLElement>;
+  const trusted  = document.querySelector(trustedSelector) as HTMLElement;
 
   if (!title || !underline || !tagline || !trusted) return;
 
-  // Create timeline
-  const tl = gsap.timeline();
+  // Immediately hide container so there's no flash before letter split
+  gsap.set(title, { opacity: 0 });
 
-  // Split title into letters
-  const titleText = title.textContent || '';
-  title.innerHTML = titleText
+  // Split into per-letter spans
+  const raw = title.textContent ?? '';
+  title.innerHTML = raw
     .split('')
-    .map(letter => (letter === ' ' ? '&nbsp;' : letter))
-    .map(letter => `<span style="display: inline-block; opacity: 0;">${letter}</span>`)
+    .map(char =>
+      char === ' '
+        ? `<span style="display:inline-block;">&nbsp;</span>`
+        : `<span style="display:inline-block;opacity:0;">${char}</span>`
+    )
     .join('');
 
-  const titleLetters = Array.from(title.querySelectorAll('span')) as HTMLElement[];
+  const letters = Array.from(title.querySelectorAll('span')) as HTMLElement[];
 
-  // Title letter stagger
-  tl.to(titleLetters, {
+  // Set initial states — GSAP owns these from here
+  gsap.set(title,    { opacity: 1 });
+  gsap.set(underline, { scaleX: 0, transformOrigin: 'left center' });
+  gsap.set(tagline,  { opacity: 0, y: 14 });
+  gsap.set(ctas,     { opacity: 0, y: 10 });
+  gsap.set(trusted,  { opacity: 0 });
+
+  const tl = gsap.timeline({ delay: 0.2 });
+
+  // 1. Letters cascade in — typewriter cadence
+  tl.to(letters, {
     opacity: 1,
-    duration: 0.3,
-    stagger: 0.05,
-    ease: 'power2.out',
-  }, 0);
+    duration: 0.022,
+    stagger: 0.032,
+    ease: 'none',
+  });
 
-  // Underline grows
-  gsap.set(underline, { width: 0 });
+  // 2. Underline grows from left (scaleX works at any breakpoint width)
   tl.to(underline, {
-    width: 'auto',
-    duration: 0.6,
+    scaleX: 1,
+    duration: 0.55,
+    ease: 'power3.out',
+  }, '-=0.08');
+
+  // 3. Tagline rises up
+  tl.to(tagline, {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
     ease: 'power2.out',
-  }, '-=0.2');
+  }, '-=0.35');
 
-  // Tagline fades in
-  gsap.set(tagline, { opacity: 0 });
-  tl.to(
-    tagline,
-    {
-      opacity: 1,
-      duration: 0.5,
-      ease: 'power2.out',
-    },
-    '-=0.3'
-  );
+  // 4. CTAs stagger in
+  tl.to(ctas, {
+    opacity: 1,
+    y: 0,
+    duration: 0.4,
+    stagger: 0.1,
+    ease: 'power2.out',
+  }, '-=0.25');
 
-  // CTAs scale in
-  gsap.set(ctas, { scale: 0.8, opacity: 0 });
-  tl.to(
-    ctas,
-    {
-      scale: 1,
-      opacity: 1,
-      duration: 0.4,
-      stagger: 0.1,
-      ease: 'back.out(1.7)',
-    },
-    '-=0.2'
-  );
-
-  // Trusted text fades in
-  gsap.set(trusted, { opacity: 0 });
-  tl.to(
-    trusted,
-    {
-      opacity: 1,
-      duration: 0.4,
-      ease: 'power2.out',
-    },
-    '-=0.1'
-  );
+  // 5. Trusted badge fades
+  tl.to(trusted, {
+    opacity: 1,
+    duration: 0.4,
+    ease: 'power2.out',
+  }, '-=0.1');
 
   return tl;
 }

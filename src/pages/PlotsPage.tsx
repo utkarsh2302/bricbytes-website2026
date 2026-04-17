@@ -22,7 +22,7 @@ export function PlotsPage() {
   ];
 
   return (
-    <div className="product-page">
+    <div className="product-page" data-page="plots">
       {/* Hero */}
       <section className="section section-padding hero-section">
         <div className="container">

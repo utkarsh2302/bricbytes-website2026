@@ -1,20 +1,17 @@
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export function AnimatedParticles() {
-  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; offsetX: number; offsetY: number; delay: number }>>([]);
-
-  useEffect(() => {
-    const newParticles = Array.from({ length: 20 }).map((_, i) => ({
+  const [particles] = useState(() =>
+    Array.from({ length: 20 }).map((_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
       offsetX: (Math.random() - 0.5) * 20,
       offsetY: (Math.random() - 0.5) * 20,
       delay: Math.random() * 2,
-    }));
-    setParticles(newParticles);
-  }, []);
+    }))
+  );
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">

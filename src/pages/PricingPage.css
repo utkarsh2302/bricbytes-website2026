@@ -3,6 +3,20 @@
   min-height: 100vh;
 }
 
+/* Amber accent top bar */
+.pricing-page .section:first-of-type {
+  position: relative;
+}
+
+.pricing-page .section:first-of-type::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff9f0a, transparent);
+  z-index: 1;
+}
+
 .section {
   width: 100%;
   padding: 0;

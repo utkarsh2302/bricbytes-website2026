@@ -245,3 +245,54 @@
     font-size: 0.875rem;
   }
 }
+
+/* ── Page-specific hero accent lines ─────────────────────────────────────── */
+.hero-section {
+  position: relative;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  opacity: 0.3;
+}
+
+/* Plots — green */
+.product-page[data-page="plots"] .hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #30d158, transparent);
+}
+
+.product-page[data-page="plots"] .step-card:hover,
+.product-page[data-page="plots"] .step-number {
+  color: #30d158;
+}
+
+.product-page[data-page="plots"] .step-card:hover {
+  border-color: #30d158;
+}
+
+/* Flats — purple */
+.product-page[data-page="flats"] .hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #bf5af2, transparent);
+}
+
+.product-page[data-page="flats"] .step-card:hover,
+.product-page[data-page="flats"] .step-number {
+  color: #bf5af2;
+}
+
+.product-page[data-page="flats"] .step-card:hover {
+  border-color: #bf5af2;
+}

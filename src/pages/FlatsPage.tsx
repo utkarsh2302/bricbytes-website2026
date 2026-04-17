@@ -22,7 +22,7 @@ export function FlatsPage() {
   ];
 
   return (
-    <div className="product-page">
+    <div className="product-page" data-page="flats">
       {/* Hero */}
       <section className="section section-padding hero-section">
         <div className="container">

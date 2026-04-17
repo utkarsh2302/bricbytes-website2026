@@ -3,6 +3,20 @@
   min-height: 100vh;
 }
 
+/* Blue accent top bar */
+.features-page .section:first-of-type {
+  position: relative;
+}
+
+.features-page .section:first-of-type::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #0071e3, transparent);
+  z-index: 1;
+}
+
 .section {
   width: 100%;
   padding: 0;

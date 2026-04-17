@@ -1,6 +1,8 @@
+import { useEffect } from 'react';
 import { Map, Eye, Bot, Activity } from 'lucide-react';
-import { motion, type Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { TiltCard } from '../ui/TiltCard';
+import { gsap, ScrollTrigger } from '../../animations/gsap-config';
 import './Features.css';
 
 const features = [
@@ -10,42 +12,46 @@ const features = [
   { num: '04', icon: Activity, title: 'Live Inventory & Broker Tools', desc: 'Real-time unit status, automated brokerage tracking, and lead attribution. Protect your sales pipeline with built-in broker management.', tag: 'Operations' },
 ];
 
-const container: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
-};
-
-const card: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
-};
-
 export function Features() {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Section header
+      gsap.from('.features .section-header', {
+        opacity: 0, y: 28, duration: 0.65, ease: 'power2.out',
+        scrollTrigger: { trigger: '.features .section-header', start: 'top 88%', once: true },
+      });
+
+      // Bento cards — alternating left/right stagger
+      gsap.utils.toArray<HTMLElement>('.feature-bento-card').forEach((card, i) => {
+        gsap.from(card, {
+          opacity: 0,
+          x: i % 2 === 0 ? -50 : 50,
+          duration: 0.65,
+          ease: 'power2.out',
+          scrollTrigger: { trigger: card, start: 'top 87%', once: true },
+        });
+      });
+    });
+
+    return () => {
+      ctx.revert();
+      ScrollTrigger.getAll().forEach(t => t.kill());
+    };
+  }, []);
+
   return (
     <section id="features" className="features section-padding">
       <div className="container">
-        <motion.div
-          className="section-header"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        >
+        <div className="section-header">
           <p className="section-label">Platform</p>
           <h2 className="section-title">AI that sells while you sleep</h2>
           <p className="section-subtitle">
             Reduce sales costs, save time, and increase closures. BrickBytes
             integrates AI at every step so your projects sell faster with less effort.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="features-bento"
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-        >
+        <div className="features-bento">
           {features.map((f) => (
             <TiltCard
               key={f.num}
@@ -53,7 +59,6 @@ export function Features() {
               tiltStrength={6}
             >
               <motion.div
-                variants={card}
                 whileHover={{ backgroundColor: 'var(--bg-tertiary)', scale: 1.005 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 30 }}
@@ -74,7 +79,7 @@ export function Features() {
               </motion.div>
             </TiltCard>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
