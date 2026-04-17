@@ -17,11 +17,16 @@
   position: relative;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  will-change: background;
+  contain: paint;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Dark overlay */
