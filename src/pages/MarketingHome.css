@@ -18,12 +18,14 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: #1a1a1a;
   min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  will-change: background;
+  will-change: background-image;
   contain: paint;
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;

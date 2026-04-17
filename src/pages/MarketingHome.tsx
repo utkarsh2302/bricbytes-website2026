@@ -148,7 +148,7 @@ export function MarketingHome() {
       <Hero />
 
       {/* ── Divider 1 ── */}
-      <section className="bg-architecture" style={{ backgroundImage: `url(${dividers[0].img}?v=1)` }}>
+      <section className="bg-architecture" style={{ backgroundImage: `url(${dividers[0].img})` }}>
         <div className="cinematic-overlay">
           <p className="cinematic-quote">{dividers[0].quote}</p>
         </div>
