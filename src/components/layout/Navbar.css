@@ -2,8 +2,11 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
   border-bottom: 1px solid transparent;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .navbar-progress {
@@ -18,10 +21,10 @@
 }
 
 .navbar-scrolled {
-  background: var(--navbar-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom-color: var(--border);
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
 .navbar-hidden {
