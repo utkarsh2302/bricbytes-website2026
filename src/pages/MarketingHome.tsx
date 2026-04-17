@@ -8,11 +8,6 @@ import { Hero } from '../components/hero/Hero';
 import { ExpandableCard } from '../components/marketing/ExpandableCard';
 import { MagneticButton } from '../components/ui/MagneticButton';
 import { gsap, ScrollTrigger } from '../animations/gsap-config';
-import arch01 from '/images/architecture-01.jpg';
-import arch02 from '/images/architecture-02.jpg';
-import arch03 from '/images/architecture-03.jpg';
-import arch04 from '/images/architecture-04.jpg';
-import arch05 from '/images/architecture-05.jpg';
 import './MarketingHome.css';
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -79,11 +74,11 @@ const stats = [
 
 // ─── Cinematic architecture dividers ─────────────────────────────────────────
 const dividers = [
-  { img: arch01, quote: 'The way real estate is sold is changing.' },
-  { img: arch02, quote: 'There\'s a better way.' },
-  { img: arch03, quote: 'Built for the teams behind every project.' },
-  { img: arch04, quote: 'Every decision, backed by real data.' },
-  { img: arch05, quote: 'Ready to take your project digital?' },
+  { img: '/images/architecture-01.jpg', quote: 'The way real estate is sold is changing.' },
+  { img: '/images/architecture-02.jpg', quote: 'There\'s a better way.' },
+  { img: '/images/architecture-03.jpg', quote: 'Built for the teams behind every project.' },
+  { img: '/images/architecture-04.jpg', quote: 'Every decision, backed by real data.' },
+  { img: '/images/architecture-05.jpg', quote: 'Ready to take your project digital?' },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
