@@ -74,11 +74,11 @@ const stats = [
 
 // ─── Cinematic architecture dividers ─────────────────────────────────────────
 const dividers = [
-  { img: '/images/architecture-01.jpg?w=1920&h=600', quote: 'The way real estate is sold is changing.' },
-  { img: '/images/architecture-02.jpg?w=1920&h=600', quote: 'There\'s a better way.' },
-  { img: '/images/architecture-03.jpg?w=1920&h=600', quote: 'Built for the teams behind every project.' },
-  { img: '/images/architecture-04.jpg?w=1920&h=600', quote: 'Every decision, backed by real data.' },
-  { img: '/images/architecture-05.jpg?w=1920&h=600', quote: 'Ready to take your project digital?' },
+  { img: '/images/architecture-01.jpg', quote: 'The way real estate is sold is changing.' },
+  { img: '/images/architecture-02.jpg', quote: 'There\'s a better way.' },
+  { img: '/images/architecture-03.jpg', quote: 'Built for the teams behind every project.' },
+  { img: '/images/architecture-04.jpg', quote: 'Every decision, backed by real data.' },
+  { img: '/images/architecture-05.jpg', quote: 'Ready to take your project digital?' },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
