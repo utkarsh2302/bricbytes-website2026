@@ -246,6 +246,54 @@
   }
 }
 
+/* ── Dark mode support ──────────────────────────────────────────────────────── */
+[data-theme="dark"] .product-page {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .bg-light {
+  background: #111111;
+}
+
+[data-theme="dark"] .section-header {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .section-title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .section-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .step-card {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .step-card:hover {
+  background: #272729;
+  border-color: #0071e3;
+}
+
+[data-theme="dark"] .step-number {
+  color: #0071e3;
+}
+
+[data-theme="dark"] .step-title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .step-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .highlight-text {
+  color: #0071e3;
+}
+
 /* ── Page-specific hero accent lines ─────────────────────────────────────── */
 .hero-section {
   position: relative;
