@@ -175,12 +175,13 @@
 .v5-word {
   position: relative;
   display: inline-block;
-  padding: 0 0.08em;
-  margin-left: 0.05em;
+  padding: 0 0.06em 0 0.08em;
+  margin-left: -0.02em;
   color: var(--text-primary);
   min-width: 7.5em;
   text-align: center;
   vertical-align: baseline;
+  white-space: nowrap;
 }
 
 .v5-word-slot {
