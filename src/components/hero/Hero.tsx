@@ -52,14 +52,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          We turn every property in India into a
-          <span className="v5-word">
-            <span className="v5-word-slot anim" ref={slotRef}>
-              signal
-            </span>
-            <span className="v5-word-underline"></span>
-          </span>
-          .
+          Turn your plotted development into a thriving digital showroom
         </motion.h1>
 
         {/* Subheading */}
@@ -69,7 +62,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          Live pricing. Verified inventory. AI that negotiates. One tap to transact.
+          360° views. Interactive 3D maps. Real-time inventory. AI-powered buyer engagement. Everything developers need to sell plots faster.
         </motion.p>
 
         {/* CTAs */}
@@ -80,10 +73,10 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <a href="#" className="btn btn-blue">
-            Explore listings <span className="arr">→</span>
+            Explore Projects <span className="arr">→</span>
           </a>
           <a href="#" className="btn btn-ghost">
-            How it works
+            For Developers
           </a>
         </motion.div>
 
@@ -92,61 +85,61 @@ export function Hero() {
           <div className="v5-rail"></div>
           <div className="v5-pulse"></div>
 
-          {/* Stage 1: Listed */}
+          {/* Stage 1: Explore */}
           <div className="v5-stage s1">
             <div className="v5-stage-label">
               <span className="n">01</span>
-              <span className="t">Listed</span>
+              <span className="t">Explore</span>
             </div>
             <div className="v5-card">
               <div className="v5-card-ph"></div>
               <div className="v5-card-meta">
-                <div className="v5-card-title">HSR Layout · 3 BHK</div>
-                <div className="v5-card-sub">Bengaluru · 1,620 sqft</div>
+                <div className="v5-card-title">Browse premium developments</div>
+                <div className="v5-card-sub">Interactive 3D maps & details</div>
               </div>
             </div>
           </div>
 
-          {/* Stage 2: Verified */}
+          {/* Stage 2: Visualize */}
           <div className="v5-stage s2">
             <div className="v5-stage-label">
               <span className="n">02</span>
-              <span className="t">Verified</span>
+              <span className="t">Visualize</span>
             </div>
             <div className="v5-stamp">
               <CheckCircle2 size={13} strokeWidth={2.4} />
-              <span>RERA · Title · Encumbrance</span>
+              <span>360° views • Drone footage</span>
             </div>
           </div>
 
-          {/* Stage 3: Priced */}
+          {/* Stage 3: Analyze */}
           <div className="v5-stage s3">
             <div className="v5-stage-label">
               <span className="n">03</span>
-              <span className="t">Priced</span>
+              <span className="t">Analyze</span>
             </div>
             <div className="v5-price">
               <div className="v5-price-row">
-                <span className="l">Asking</span>
-                <span className="v">₹ 2.24 Cr</span>
+                <span className="l">EMI Calculator</span>
+                <span className="v">Compare prices</span>
               </div>
               <div className="v5-price-row">
-                <span className="l">Fair value</span>
-                <span className="v blue">₹ 2.38 Cr</span>
+                <span className="l">Investment insights</span>
+                <span className="v blue">Full clarity</span>
               </div>
               <div className="v5-price-bar">
                 <div className="v5-price-fill"></div>
                 <div className="v5-price-mark"></div>
               </div>
-              <div className="v5-price-note">6.1% under market</div>
+              <div className="v5-price-note">Make informed decisions</div>
             </div>
           </div>
 
-          {/* Stage 4: Transacted */}
+          {/* Stage 4: Inquire */}
           <div className="v5-stage s4">
             <div className="v5-stage-label">
               <span className="n">04</span>
-              <span className="t">Transacted</span>
+              <span className="t">Inquire</span>
             </div>
             <div className="v5-done">
               <div className="v5-done-ring">
@@ -159,8 +152,8 @@ export function Hero() {
                 </svg>
               </div>
               <div className="v5-done-txt">
-                <div className="t">Offer accepted</div>
-                <div className="s">Escrow • e-Stamp • Registered</div>
+                <div className="t">Move forward with confidence</div>
+                <div className="s">Ask • Schedule • Decide</div>
               </div>
             </div>
           </div>
@@ -169,23 +162,8 @@ export function Hero() {
         {/* Footer stats */}
         <div className="v5-foot">
           <div className="v5-foot-item">
-            <b>51,284</b>
-            <span>listings</span>
-          </div>
-          <span className="v5-foot-sep"></span>
-          <div className="v5-foot-item">
-            <b>₹ 2,340 Cr</b>
-            <span>transacted '25</span>
-          </div>
-          <span className="v5-foot-sep"></span>
-          <div className="v5-foot-item">
-            <b>11</b>
-            <span>cities live</span>
-          </div>
-          <span className="v5-foot-sep"></span>
-          <div className="v5-foot-item">
-            <b>0</b>
-            <span>broker calls</span>
+            <b>Trusted by</b>
+            <span>developers across India</span>
           </div>
         </div>
       </div>
