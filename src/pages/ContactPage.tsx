@@ -55,9 +55,8 @@ export function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
             >
-              {/* REPLACE: Update WhatsApp number */}
               <motion.a
-                href="https://wa.me/91XXXXXXXXXX?text=Hi%20BrickBytes%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20platform."
+                href="https://wa.me/919507321260?text=Hi%20BrickBytes%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20platform."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-card base-card"
@@ -75,9 +74,8 @@ export function ContactPage() {
                 <ArrowUpRight size={20} className="contact-card-arrow" />
               </motion.a>
 
-              {/* REPLACE: Update email */}
               <motion.a
-                href="mailto:hello@brickbytes.in"
+                href="mailto:business@brickbytes.in"
                 className="contact-card base-card"
                 whileHover={{ y: -3, boxShadow: 'var(--shadow-md)', borderColor: 'var(--border-strong)' }}
                 whileTap={{ scale: 0.98, y: 0 }}

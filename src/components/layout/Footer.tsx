@@ -34,11 +34,10 @@ export function Footer() {
               AI-powered real estate digitization for developers and builders.
             </p>
             <div className="footer-social">
-              {/* REPLACE: Update social links */}
               {[
                 { href: '#', label: 'Twitter',  Icon: Twitter },
                 { href: '#', label: 'LinkedIn', Icon: Linkedin },
-                { href: 'mailto:hello@brickbytes.in', label: 'Email', Icon: Mail },
+                { href: 'mailto:business@brickbytes.in', label: 'Email', Icon: Mail },
               ].map(({ href, label, Icon }) => (
                 <motion.a
                   key={label}
@@ -72,11 +71,6 @@ export function Footer() {
 
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} BrickBytes. All rights reserved.</p>
-          <div className="footer-legal">
-            {/* REPLACE: Add actual links */}
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-          </div>
         </div>
       </div>
     </footer>

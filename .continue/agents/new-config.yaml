@@ -1,0 +1,10 @@
+name: My Config
+version: 1.0.0
+schema: v1
+
+models:
+  - name: nvidia
+    provider: openai-compatible
+    model: meta/llama3-70b-instruct
+    apiBase: https://integrate.api.nvidia.com/v1
+    apiKey: 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

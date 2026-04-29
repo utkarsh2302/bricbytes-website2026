@@ -167,10 +167,10 @@ export function AboutPage() {
                   <path d="M20 21a8 8 0 1 0-16 0" />
                 </svg>
               </div>
-              <h3 className="founder-name">Founder Name</h3>
-              <p className="founder-role">Co-Founder & CEO</p>
+              <h3 className="founder-name">Utkarsh Sharma</h3>
+              <p className="founder-role">Founder</p>
               <p className="founder-bio">
-                Visionary leader with 10+ years in real estate tech. Obsessed with solving the biggest problems in property sales.
+                Technology-focused entrepreneur with expertise in web development, AI, and product systems. Transforms complex ideas into scalable, high-performance solutions with deep market insight in real estate.
               </p>
             </motion.div>
 
@@ -182,10 +182,10 @@ export function AboutPage() {
                   <path d="M20 21a8 8 0 1 0-16 0" />
                 </svg>
               </div>
-              <h3 className="founder-name">Founder Name</h3>
-              <p className="founder-role">Co-Founder & CTO</p>
+              <h3 className="founder-name">Rashika Verma</h3>
+              <p className="founder-role">Founder</p>
               <p className="founder-bio">
-                Full-stack engineer and 3D specialist. Builds the infrastructure that powers seamless real estate experiences.
+                Design-first leader focused on user experience and branding. Translates concepts into intuitive, refined digital interfaces that are both aesthetically strong and functionally aligned with vision.
               </p>
             </motion.div>
           </div>
