@@ -31,6 +31,12 @@ const problemCards = [
     summary: 'No referral tracking…',
     content: 'No way to track referrals. Brokers push competing projects. Commissions are disputed. The buyer you paid to acquire ends up walking to a competitor.',
   },
+  {
+    icon: <Bot size={22} />,
+    title: 'No Buyer Support',
+    summary: 'Sales teams overwhelmed…',
+    content: 'Thousands of repetitive questions, endless back-and-forth. No one knows property details like a human. Deals fall through while waiting for responses.',
+  },
 ];
 
 const featureTiles = [
