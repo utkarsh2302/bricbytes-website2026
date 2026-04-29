@@ -827,6 +827,11 @@
     gap: 0.4rem;
   }
 
+  .v5-word {
+    min-width: auto;
+    padding: 0;
+  }
+
   .v5-eyebrow {
     font-size: 0.7rem;
     padding: 0.3rem 0.6rem;
