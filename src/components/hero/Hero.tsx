@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 import './Hero.css';
 
-const words = ['signal', 'listing', 'price', 'contract', 'deal'];
+const words = ['thriving', 'premium', 'interactive', 'immersive', 'connected'];
 
 export function Hero() {
   const [currentWordIdx, setCurrentWordIdx] = useState(0);
@@ -52,7 +52,14 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Turn your plotted development into a thriving digital showroom
+          Turn your plotted development into a{' '}
+          <span className="v5-word">
+            <span className="v5-word-slot anim" ref={slotRef}>
+              {words[currentWordIdx]}
+            </span>
+            <span className="v5-word-underline"></span>
+          </span>{' '}
+          digital showroom
         </motion.h1>
 
         {/* Subheading */}
