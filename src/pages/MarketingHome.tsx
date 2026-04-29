@@ -42,13 +42,6 @@ const adminFeatures = [
   'Project-level analytics',
 ];
 
-const stats = [
-  { number: '65+',     label: 'Townships Listed' },
-  { number: '11,000+', label: 'Buyers Served' },
-  { number: '₹500 Cr+', label: 'In Plots Tracked' },
-  { number: '4',        label: 'Cities Active' },
-];
-
 // ─── Cinematic architecture dividers ─────────────────────────────────────────
 const dividers = [
   { img: '/images/architecture-01.jpg', quote: 'The way real estate is sold is changing.' },
@@ -89,12 +82,6 @@ export function MarketingHome() {
       gsap.from('.gs-admin-item', {
         opacity: 0, x: -22, duration: 0.5, ease: 'power2.out', stagger: 0.07,
         scrollTrigger: { trigger: '.gs-admin-features', start: 'top 86%', once: true },
-      });
-
-      // Stat cards — scale up
-      gsap.from('.gs-stat-card', {
-        opacity: 0, scale: 0.88, y: 16, duration: 0.5, ease: 'power2.out', stagger: 0.1,
-        scrollTrigger: { trigger: '.gs-stats-grid', start: 'top 86%', once: true },
       });
 
       // CTA sections
@@ -229,24 +216,6 @@ export function MarketingHome() {
         </div>
       </section>
 
-      {/* ── Stats ── */}
-      <section className="section section-padding">
-        <div className="container">
-          <div className="gs-section-header section-header text-center">
-            <p className="section-label">Proof</p>
-            <h2 className="section-title">Builders trust BrickBytes.</h2>
-          </div>
-          <div className="stats-grid gs-stats-grid">
-            {stats.map((stat, idx) => (
-              <div key={idx} className="stat-card gs-stat-card">
-                <div className="stat-number">{stat.number}</div>
-                <div className="stat-label">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Divider 5 ── */}
       <section className="bg-architecture" style={{ backgroundImage: `url(${dividers[4].img})` }}>
         <div className="cinematic-overlay">
@@ -286,8 +255,8 @@ export function MarketingHome() {
               <MagneticButton as="a" href="/contact" className="btn-primary">
                 Book Your Free Demo
               </MagneticButton>
-              <MagneticButton as="a" href="tel:+919876500000" className="btn-secondary">
-                Call us: +91 98765 00000
+              <MagneticButton as="a" href="tel:+917742200618" className="btn-secondary">
+                Call us: +91 7742200618
               </MagneticButton>
             </div>
           </div>
