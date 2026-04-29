@@ -52,7 +52,8 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Turn your plotted development into a{' '}
+          Turn your plotted development into
+          <br />a{' '}
           <span className="v5-word">
             <span className="v5-word-slot anim" ref={slotRef}>
               {words[currentWordIdx]}
@@ -79,10 +80,10 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <a href="#" className="btn btn-blue">
+          <a href="/#features" className="btn btn-blue">
             Explore Projects <span className="arr">→</span>
           </a>
-          <a href="#" className="btn btn-ghost">
+          <a href="/contact" className="btn btn-ghost">
             For Developers
           </a>
         </motion.div>

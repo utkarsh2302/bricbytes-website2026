@@ -2,42 +2,13 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowRight, Map, Zap, Eye, Bot, Calculator, BarChart2, Check,
-  MapPin, Users, TrendingUp,
 } from 'lucide-react';
 import { Hero } from '../components/hero/Hero';
-import { ExpandableCard } from '../components/marketing/ExpandableCard';
 import { MagneticButton } from '../components/ui/MagneticButton';
 import { gsap, ScrollTrigger } from '../animations/gsap-config';
 import './MarketingHome.css';
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
-
-const problemCards = [
-  {
-    icon: <MapPin size={22} />,
-    title: 'Outdated Site Maps',
-    summary: 'Static PDFs & WhatsApp photos…',
-    content: 'Static PDFs, printed brochures, WhatsApp photos. Buyers get confused, call repeatedly, and walk away before they\'ve even seen the right plot.',
-  },
-  {
-    icon: <Users size={22} />,
-    title: 'Zero Transparency',
-    summary: 'Buyers don\'t know availability…',
-    content: 'Buyers don\'t know which plots are actually available. Sold plots show as available. Trust erodes. Your sales team spends hours clarifying basics.',
-  },
-  {
-    icon: <TrendingUp size={22} />,
-    title: 'Broker Chaos',
-    summary: 'No referral tracking…',
-    content: 'No way to track referrals. Brokers push competing projects. Commissions are disputed. The buyer you paid to acquire ends up walking to a competitor.',
-  },
-  {
-    icon: <Bot size={22} />,
-    title: 'No Buyer Support',
-    summary: 'Sales teams overwhelmed…',
-    content: 'Thousands of repetitive questions, endless back-and-forth. No one knows property details like a human. Deals fall through while waiting for responses.',
-  },
-];
 
 const featureTiles = [
   { Icon: Map,        title: '3D Interactive Site Map',      description: 'Rotate, zoom, tap any plot for live pricing and specs.' },
@@ -160,28 +131,6 @@ export function MarketingHome() {
         </div>
       </section>
 
-      {/* ── Problem ── */}
-      <section className="section section-padding">
-        <div className="container">
-          <div className="gs-section-header section-header text-center">
-            <p className="section-label">The Problem</p>
-            <h2 className="section-title">The old way of selling plots is broken.</h2>
-          </div>
-          <div className="problem-grid">
-            {problemCards.map((card, idx) => (
-              <ExpandableCard key={idx} {...card} index={idx} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Divider 2 ── */}
-      <section className="bg-architecture" style={{ backgroundImage: `url(${dividers[1].img})` }}>
-        <div className="cinematic-overlay">
-          <p className="cinematic-quote">{dividers[1].quote}</p>
-        </div>
-      </section>
-
       {/* ── Platform Demo ── */}
       <section className="section section-padding bg-secondary">
         <div className="container">
@@ -203,6 +152,13 @@ export function MarketingHome() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Divider 2 ── */}
+      <section className="bg-architecture" style={{ backgroundImage: `url(${dividers[1].img})` }}>
+        <div className="cinematic-overlay">
+          <p className="cinematic-quote">{dividers[1].quote}</p>
         </div>
       </section>
 
