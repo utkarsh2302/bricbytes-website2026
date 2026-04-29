@@ -54,6 +54,7 @@ export function ContactPage() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
+              style={{ marginBottom: '2rem' }}
             >
               <motion.a
                 href="https://wa.me/919507321260?text=Hi%20BrickBytes%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20platform."
@@ -90,6 +91,34 @@ export function ContactPage() {
                 </div>
                 <ArrowUpRight size={20} className="contact-card-arrow" />
               </motion.a>
+            </motion.div>
+
+            {/* Address & Legal Info */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              style={{
+                marginTop: '3rem',
+                paddingTop: '2rem',
+                borderTop: '1px solid rgba(255,255,255,0.1)',
+                maxWidth: '600px',
+                margin: '3rem auto 0'
+              }}
+            >
+              <h3 style={{ fontSize: '0.875rem', fontWeight: 600, marginBottom: '1rem', color: '#ffffff' }}>
+                Our Office
+              </h3>
+              <p style={{ fontSize: '0.95rem', lineHeight: 1.6, color: 'rgba(255,255,255,0.8)', margin: 0 }}>
+                Khushi Sansar, Lakshmi Nikunjn<br/>
+                Rampura Road, Mohanpura<br/>
+                Jaipur, Rajasthan 302020<br/>
+                India
+              </p>
+              <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', marginTop: '1rem', marginBottom: 0 }}>
+                BRICKNOVA TECHNOLOGIES PRIVATE LIMITED<br/>
+                CIN: U62011RJ2026PTC113544 | GSTIN: 08AAOCB6672J1Z2
+              </p>
             </motion.div>
           </div>
         </div>
