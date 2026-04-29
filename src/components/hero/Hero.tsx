@@ -52,8 +52,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Turn your plotted development into
-          <br />a{' '}
+          Turn your plotted development into a{' '}
           <span className="v5-word">
             <span className="v5-word-slot anim" ref={slotRef}>
               {words[currentWordIdx]}
