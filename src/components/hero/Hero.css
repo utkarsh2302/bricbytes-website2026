@@ -177,6 +177,8 @@
   display: inline-block;
   padding: 0 0.14em;
   color: var(--text-primary);
+  min-width: 7.5em;
+  text-align: center;
 }
 
 .v5-word-slot {
@@ -188,6 +190,7 @@
   letter-spacing: -0.02em;
   text-shadow: 0 0 22px rgba(41, 151, 255, 0.55), 0 0 40px rgba(0, 113, 227, 0.35);
   animation: v5-word-in 0.6s cubic-bezier(0.2, 0.9, 0.2, 1);
+  min-width: 100%;
 }
 
 .v5-word-slot.anim {
