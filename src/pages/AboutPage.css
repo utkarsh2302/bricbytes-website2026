@@ -115,10 +115,7 @@
 }
 
 .mission-content {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 4rem;
-  align-items: start;
+  display: block;
 }
 
 .mission-text p {
@@ -130,21 +127,6 @@
 
 .mission-text p:last-child {
   margin-bottom: 0;
-}
-
-.mission-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.stat-item {
-  padding: 1.5rem;
-  background: var(--bg-secondary);
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  text-align: center;
-  transition: all var(--transition-normal);
 }
 
 .stat-item:hover {

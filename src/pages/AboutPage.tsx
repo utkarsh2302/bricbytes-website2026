@@ -98,20 +98,6 @@ export function AboutPage() {
                 and earn fair commissions. That's the BrickBytes difference.
               </p>
             </div>
-            <div className="mission-stats">
-              <div className="stat-item">
-                <div className="stat-number">65+</div>
-                <div className="stat-label">Projects Listed</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">11K+</div>
-                <div className="stat-label">Buyers Served</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">₹500Cr+</div>
-                <div className="stat-label">In Transactions</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -197,7 +183,7 @@ export function AboutPage() {
         <div className="container">
           <div className="cta-content">
             <h2 className="cta-title">Ready to transform your projects?</h2>
-            <p className="cta-subtitle">Join 65+ developers who've already gone digital</p>
+            <p className="cta-subtitle">Join developers who've transformed their sales with BrickBytes</p>
             <a href="/contact" className="btn-primary btn-lg">Book Your Demo</a>
           </div>
         </div>
