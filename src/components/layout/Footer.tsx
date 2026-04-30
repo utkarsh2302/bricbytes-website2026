@@ -35,8 +35,9 @@ export function Footer() {
             </p>
             <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.6)', marginTop: '0.5rem', lineHeight: '1.4' }}>
               BRICKNOVA TECHNOLOGIES PRIVATE LIMITED<br/>
-              CIN: U62011RJ2026PTC113544 | GSTIN: 08AACB6672J1Z2<br/>
-              Khushi Sansar, Lakshmi Nikunjn, Rampura Road, Jaipur, Rajasthan 302020
+              CIN: U62011RJ2026PTC113544 | GSTIN: 08AAOCB6672J1Z2<br/>
+              Khushi Sansar, Lakshmi Nikunjn, Rampura Road, Jaipur, Rajasthan 302020<br/>
+              <a href="tel:+919507321260" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>+91 9507321260</a> | <a href="tel:+917742200618" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>+91 7742200618</a>
             </p>
             <div className="footer-social">
               {[
