@@ -46,11 +46,11 @@ export function MarketingFooter() {
             <h4 className="footer-heading">Get in Touch</h4>
             <div className="contact-item">
               <Mail size={18} />
-              <a href="mailto:hello@brickbytes.in">hello@brickbytes.in</a>
+              <a href="mailto:business@brickbytes.in">business@brickbytes.in</a>
             </div>
             <div className="contact-item">
               <MessageCircle size={18} />
-              <a href="https://wa.me/919876500000" target="_blank" rel="noopener noreferrer">+91 98765 00000</a>
+              <a href="https://wa.me/919507321260" target="_blank" rel="noopener noreferrer">+91 9507321260</a>
             </div>
             <div className="contact-item">
               <MapPin size={18} />
