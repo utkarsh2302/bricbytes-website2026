@@ -4,7 +4,6 @@ import { MarketingHome } from './pages/MarketingHome';
 import { FeaturesPage } from './pages/FeaturesPage';
 import { PlotsPage } from './pages/PlotsPage';
 import { FlatsPage } from './pages/FlatsPage';
-import { PricingPage } from './pages/PricingPage';
 import { BrokerPage } from './pages/BrokerPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
@@ -19,7 +18,6 @@ export function AppRoutes() {
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/plots" element={<PlotsPage />} />
         <Route path="/flats" element={<FlatsPage />} />
-        <Route path="/pricing" element={<PricingPage />} />
         <Route path="/broker-partners" element={<BrokerPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />

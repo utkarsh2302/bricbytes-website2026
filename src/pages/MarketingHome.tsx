@@ -223,24 +223,6 @@ export function MarketingHome() {
         </div>
       </section>
 
-      {/* ── Pricing Teaser ── */}
-      <section className="section section-padding">
-        <div className="container text-center">
-          <div className="gs-cta-block">
-            <p className="section-label">Pricing</p>
-            <h2 className="section-title">Simple, honest pricing.</h2>
-            <p className="section-subtitle">
-              No hidden fees. No per-seat charges. One flat subscription per project. Cancel anytime.
-            </p>
-            <div className="cta-buttons" style={{ marginTop: '2rem' }}>
-              <MagneticButton as="a" href="/pricing" className="btn-primary">
-                See Pricing <ArrowRight size={16} />
-              </MagneticButton>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── Final CTA ── */}
       <section className="section section-padding bg-dark">
         <div className="container text-center">

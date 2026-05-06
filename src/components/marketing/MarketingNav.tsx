@@ -21,7 +21,6 @@ export function MarketingNav() {
     { label: 'Features', href: '/features' },
     { label: 'Plots', href: '/plots' },
     { label: 'Flats', href: '/flats' },
-    { label: 'Pricing', href: '/pricing' },
     { label: 'Brokers', href: '/broker-partners' },
     { label: 'About', href: '/about' },
   ];

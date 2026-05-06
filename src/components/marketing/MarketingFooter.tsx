@@ -15,7 +15,6 @@ export function MarketingFooter() {
               <li><a href="#features">Features</a></li>
               <li><a href="#plots">Plots</a></li>
               <li><a href="#flats">Flats</a></li>
-              <li><a href="#pricing">Pricing</a></li>
               <li><a href="#brokers">Brokers</a></li>
             </ul>
           </div>
