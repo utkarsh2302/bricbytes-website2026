@@ -166,7 +166,7 @@ export function MarketingHome() {
                 <h3 className="product-title">{product.title}</h3>
                 <p className="product-description">{product.description}</p>
                 <motion.a
-                  href="#"
+                  href={idx === 0 ? '/plots' : '/contact'}
                   className="product-cta"
                   whileHover={{ x: 4 }}
                   whileTap={{ scale: 0.95 }}

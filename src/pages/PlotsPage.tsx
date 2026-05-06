@@ -39,7 +39,7 @@ export function PlotsPage() {
               Upload your GeoJSON plot boundaries. In 48 hours, your buyers get a fully interactive 3D terrain map with live availability, AI assistance, and a complete digital buying journey — all in one link.
             </p>
             <motion.a
-              href="#contact"
+              href="/contact"
               className="btn-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -113,7 +113,7 @@ export function PlotsPage() {
               Join the developers who've moved their sales digital. Setup takes under 48 hours.
             </p>
             <motion.a
-              href="#contact"
+              href="/contact"
               className="btn-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

@@ -286,14 +286,16 @@
 .cta-buttons {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .btn-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   background: var(--accent-primary);
   color: #ffffff;
@@ -308,6 +310,8 @@
   letter-spacing: -0.01em;
   overflow: hidden;
   position: relative;
+  white-space: nowrap;
+  min-width: fit-content;
 }
 
 .btn-primary:hover {
@@ -317,6 +321,7 @@
 .btn-secondary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   background: transparent;
   color: #ffffff;
@@ -331,6 +336,8 @@
   letter-spacing: -0.01em;
   overflow: hidden;
   position: relative;
+  white-space: nowrap;
+  min-width: fit-content;
 }
 
 .btn-secondary:hover {

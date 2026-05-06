@@ -219,6 +219,7 @@
   align-items: center;
   gap: 1rem;
   transition: all var(--transition-normal);
+  opacity: 1;
 }
 
 .founder-card:hover {
@@ -229,7 +230,15 @@
 
 [data-theme="dark"] .founder-card {
   background: #1a1a1a;
-  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .founder-name {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .founder-bio {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 [data-theme="dark"] .founder-card:hover {

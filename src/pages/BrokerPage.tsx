@@ -68,7 +68,7 @@ export function BrokerPage() {
               Every lead you generate is tagged with your name. Every conversion rewards you. Every project has a trackable link. Stop guessing where your commission goes.
             </p>
             <motion.a
-              href="#contact"
+              href="/contact"
               className="btn-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -151,7 +151,7 @@ export function BrokerPage() {
             <h3>Unlock premium features</h3>
             <p>₹49,999 / year — includes commission tracking, advanced analytics, AI follow-ups, and priority support.</p>
             <motion.a
-              href="#contact"
+              href="/contact"
               className="btn-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -176,7 +176,7 @@ export function BrokerPage() {
               Join 500+ channel partners who are tracking 100% of their commissions with BrickBytes.
             </p>
             <motion.a
-              href="#contact"
+              href="/contact"
               className="btn-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

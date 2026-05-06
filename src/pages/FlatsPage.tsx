@@ -39,7 +39,7 @@ export function FlatsPage() {
               Upload your tower floor plans and inventory. In 48 hours, your buyers get an interactive floor plan grid, 360° virtual tours per unit, real-time possession tracker, and a complete digital buying journey — all in one platform.
             </p>
             <motion.a
-              href="#contact"
+              href="/contact"
               className="btn-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -113,7 +113,7 @@ export function FlatsPage() {
               Join 100+ developers launching their projects on BrickBytes. Setup takes 48 hours.
             </p>
             <motion.a
-              href="#contact"
+              href="/contact"
               className="btn-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

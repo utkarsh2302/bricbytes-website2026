@@ -11,17 +11,20 @@ export function Hero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentWordIdx((prev) => (prev + 1) % words.length);
-      if (slotRef.current) {
-        slotRef.current.classList.remove('anim');
-        void slotRef.current.offsetWidth;
-        slotRef.current.textContent = words[(currentWordIdx + 1) % words.length];
-        slotRef.current.classList.add('anim');
-      }
+      setCurrentWordIdx((prev) => {
+        const nextIdx = (prev + 1) % words.length;
+        if (slotRef.current) {
+          slotRef.current.classList.remove('anim');
+          void slotRef.current.offsetWidth;
+          slotRef.current.textContent = words[nextIdx];
+          slotRef.current.classList.add('anim');
+        }
+        return nextIdx;
+      });
     }, 2200);
 
     return () => clearInterval(interval);
-  }, [currentWordIdx]);
+  }, []);
 
   return (
     <section className="hero hero-v5">
@@ -79,11 +82,8 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <a href="/#features" className="btn btn-blue">
+          <a href="/features" className="btn btn-blue">
             Explore Projects <span className="arr">→</span>
-          </a>
-          <a href="/contact" className="btn btn-ghost">
-            For Developers
           </a>
         </motion.div>
 
